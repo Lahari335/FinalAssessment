@@ -12,11 +12,11 @@ public class DragDrop {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "C:\\lahari\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://jqueryui.com/droppable/");
-		driver.manage().window().maximize();
+		driver.get("https://jqueryui.com/droppable/"); //nagigates to this site
+		driver.manage().window().maximize(); //maximises the screen
 		driver.switchTo().frame(driver.findElement(By.className("demo-frame")));
 		Actions mouse3 = new Actions(driver);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); //timeunit
 		mouse3.dragAndDropBy(driver.findElement(By.id("draggable")),150, 0).build().perform();
 
 	}
