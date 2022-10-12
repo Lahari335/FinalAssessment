@@ -12,13 +12,11 @@ public class Hover {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "C:\\lahari\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://magento.softwaretestingboard.com/");
-		WebElement move = driver.findElement(By.linkText("Training"));
-		
-		Actions act = new Actions(driver);
-		act.moveToElement(move);
-		act.build().perform();
-		System.out.println("Done");
+		driver.get("https://jqueryui.com");
+			driver.manage().window().maximize();
+			Actions mouse2 = new Actions(driver);
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+			mouse2.moveToElement(driver.findElement(By.linkText("JS Foundation"))).build().perform();
 
 	}
 
