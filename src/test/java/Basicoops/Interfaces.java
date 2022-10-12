@@ -1,24 +1,24 @@
 package Basicoops;
-interface sun1{
-    void moon1();
+interface dental1{
+    void mentalhealth1();
 }
-interface sun2{
-	void moon2();
+interface dental2{
+	void mentalhealth2();
 }
 
-public class Interfaces implements sun1,sun2{
+public class Interfaces implements dental1,dental2{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Interfaces obj = new Interfaces();
-        obj.moon1();
-        obj.moon2();
+        obj.mentalhealth1();
+        obj.mentalhealth2();
 
     }
-    public void moon1() {
-        System.out.println("Milky way galaxy consists of moon and star");
+    public void mentalhealth1() {
+        System.out.println("Mental health care is much needed");
     }
-    public void moon2() {
-        System.out.println("sun is surrounded by star");
+    public void mentalhealth2() {
+        System.out.println("dental care is also needed with mental health");
 
 	}
 
