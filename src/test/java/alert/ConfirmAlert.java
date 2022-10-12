@@ -13,12 +13,15 @@ public class ConfirmAlert {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "C:\\lahari\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://selenium08.blogspot.com/2019/07/alert-test.html ");
-		driver.findElement(By.id("confirm")).click();
-		Alert confirm_alert = driver.switchTo().alert();
-		System.out.println(confirm_alert.getText());
-		driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
-		confirm_alert.dismiss();
+		driver.get("https://demo.automationtesting.in/Alerts.html");
+		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		//driver.findElement(By.linkText("")).click();
+		driver.findElement(By.xpath("//a[contains(text(), 'Alert with OK & Cancel ')]")).click();
+		driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
+		Alert confirm=driver.switchTo().alert();
+		System.out.println(confirm.getText());
+		//confirm.accept();
+		confirm.dismiss();
 
 	}
 
