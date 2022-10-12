@@ -1,22 +1,24 @@
 package Basicoops;
-
 import java.util.Iterator;
 import java.util.LinkedList;
-
 public class Collection2 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedList<String> al=new LinkedList<String>();  
-		al.add("Java");  
-		al.add("Python");  
-		al.add("C");  
-		al.add("dotnet");  
-		Iterator<String> itr=al.iterator();  
-		while(itr.hasNext()){  
-		System.out.println(itr.next());  
-		}  
+		 LinkedList<String> ll = new LinkedList<String>();
+	        System.out.println("List types of transportation services");
+	        ll.add("bus service");
+	        ll.add("train service");  
+	        System.out.println(ll);
+	        System.out.println();
+	        ll.addLast("ola service");
+	        ll.addFirst("uber service");
+	        System.out.println(ll);
+	        System.out.println();
+	        ll.remove("bus service");	    
+	        ll.removeFirst();
+	        ll.removeLast();
+	        System.out.println(ll) ;
+	}  
 
-	}
-
-}
+} 
+		
