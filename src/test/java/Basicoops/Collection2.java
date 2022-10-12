@@ -4,8 +4,9 @@ import java.util.LinkedList;
 public class Collection2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 LinkedList<String> ll = new LinkedList<String>();
+		 LinkedList<String> ll = new LinkedList<String>(); //class linkedlist
 	        System.out.println("List types of transportation services");
+		//adding elements to the linked list
 	        ll.add("bus service");
 	        ll.add("train service");  
 	        System.out.println(ll);
