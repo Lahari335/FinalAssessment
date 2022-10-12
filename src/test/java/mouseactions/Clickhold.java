@@ -12,21 +12,20 @@ public class Clickhold {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
 				System.setProperty("webdriver.chrome.driver", "C:\\lahari\\chromedriver.exe");
 				WebDriver driver = new ChromeDriver();
-				driver.get("https://selenium08.blogspot.com/2020/01/click-and-hold.html");
-				driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS);
-				WebElement boxA = driver.findElement(By.xpath("//li[@name='B']"));
-				WebElement boxC = driver.findElement(By.xpath("//li[@name='C']"));
-				Actions mouse_action = new Actions(driver);
-				mouse_action.moveToElement(boxA);
-				mouse_action.clickAndHold();
-				mouse_action.moveToElement(boxC);
-				mouse_action.build().perform();
-				Thread.sleep(2000);
-				//driver.close();
-				System.out.println("Done");
+				driver.get("https://jqueryui.com/selectable/"); //naviagtes to this website
+				driver.manage().window().maximize(); //maximises the screen
+				driver.switchTo().frame(driver.findElement(By.className("demo-frame")));
+				Actions mouse1 = new Actions(driver);
+				driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+				mouse1.click(driver.findElement(By.xpath("//ol/li[1]"))).build().perform();
+				mouse1.click(driver.findElement(By.xpath("//ol/li[2]"))).build().perform();
+				mouse1.click(driver.findElement(By.xpath("//ol/li[3]"))).build().perform();
+				mouse1.click(driver.findElement(By.xpath("//ol/li[4]"))).build().perform();
+				mouse1.click(driver.findElement(By.xpath("//ol/li[5]"))).build().perform();
+				mouse1.click(driver.findElement(By.xpath("//ol/li[6]"))).build().perform();
+				mouse1.click(driver.findElement(By.xpath("//ol/li[7]"))).build().perform();
 
 	}
 
